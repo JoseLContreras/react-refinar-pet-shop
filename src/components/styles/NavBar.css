@@ -1,0 +1,136 @@
+.header {
+  position: absolute;
+  width: 100%;
+}
+.header-container {
+  display: grid;
+  /* grid-template: 1fr / 1fr 1fr 1fr; */
+  grid-template: 1fr 1fr/ 1fr 1fr;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1024;
+}
+
+.logo-container {
+  grid-column: 1 / span 2;
+  grid-row: first-line / 1;
+  padding-top: 3px;
+  cursor: pointer;
+  justify-self: center;
+}
+
+.menu-button {
+  justify-self: center;
+  cursor: pointer;
+}
+
+.menu-button span {
+  margin-left: 10px;
+  color: black;
+  font-size: 18px;
+}
+
+nav {
+  display: none;
+}
+
+.nav-container {
+  display: flex;
+}
+
+.nav-container li {
+  margin: 0 10px;
+  list-style: none;
+}
+
+.nav-container li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.products-item {
+  min-width: 96px;
+}
+
+/*backgrounds*/
+.background--transparent {
+  background-color: transparent;
+}
+
+.background--black {
+  background-color: rgba(29, 29, 29, 0.9);
+}
+
+.arrow::after {
+  width: 5px;
+  height: 5px;
+  transform: rotate(135deg);
+  border-right: 1px solid currentColor;
+  border-top: 1px solid currentColor;
+  content: '';
+  background-color: transparent;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+/* ... */
+
+.products-item {
+  position: relative;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.products-item:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  margin-bottom: 10px;
+}
+
+.dropdown li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown li a:hover {
+  color: #ccc;
+}
+
+/*mediaqueries*/
+
+@media only screen and (min-width: 800px) {
+  nav {
+    display: block;
+    justify-self: center;
+  }
+
+  .menu-button {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header-container {
+    grid-template: 1fr / 1fr 1fr 1fr;
+  }
+
+  .logo-container {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}

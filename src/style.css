@@ -1,0 +1,42 @@
+:root {
+  /*fonts*/
+  --catamaran-font: 'Catamaran', sans-serif;
+  --mulish-font: 'Mulish', sans-serif;
+  /*colors*/
+  --pimary-color: #f7b035;
+  --secondary-color: #256b3e;
+  --body-bg-color: #1d1d1d;
+  --border-color: #555555;
+  --success-color: #4f8a10;
+  --error-color: #d8000c;
+  --info-color: #31708f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: var(--mulish-font);
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-card {
+  margin: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
